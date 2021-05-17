@@ -104,6 +104,7 @@ let textItem = document.createElement('span');
 let textSpan = document.createTextNode(addItem)
 let btn = document.createElement('button');
     btn.innerHTML = "delete";
+    textItem.style.padding = "0px 10px 0px 0px"
 
 
     /*put value in the elements*/
@@ -114,31 +115,19 @@ textItem.appendChild(textSpan);
 
     /* add attribute to delete button*/
 att = document.createAttribute('id');
-att.value = ('delete');
+att.value = (addItem);
 btn.setAttributeNode(att);
-deletebtn = document.getElementById('delete');
+deletebtn = document.getElementById(addItem);
 /*add attribute to li item*/
 attItem = document.createAttribute('id');
-attItem.value = ('item');
+attItem.value = addItem;
 item.setAttributeNode(attItem);
 
 /*delete item*/
 deletebtn.onclick = function() {
-removeItem = document.getElementById('item');
+removeItem = document.getElementById(addItem);
 list.removeChild(removeItem);
 }
 }        
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 </html>
