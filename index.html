@@ -46,6 +46,9 @@
         margin: 15px 15px 0px 15px;
         padding: 15px 15px 0px 15px;
     }
+    .shopList {
+        display: inline-block;
+    }
 </style>
 <body>
     <div class="nav-wrapper">
@@ -68,14 +71,67 @@
             <div class="input">
                 <label for="">What's on Your List?</label>
                 <input type="text">
-                <button>add</button>
+                <button id="submit">add</button>
             </div>
             <div class="list">
-                <ul>
+                <ul id="shopList" class="shopList">
                 </ul>
             </div>
         </div>
     </div>
     
 </body>
+<script>
+
+/* getting value from input and trigger event*/
+
+submit.onclick = function () {
+    addToList();
+}
+
+/*create function to add and delete for list*/
+function addToList () {
+
+/*get input value*/
+let submit = document.getElementById('submit');
+let inputValue = document.querySelector('input');
+let addItem = inputValue.value;
+
+
+/* create element and append to unordered list*/
+let list = document.getElementById('shopList');
+let item = document.createElement('li');
+let textItem = document.createElement('span');
+let textSpan = document.createTextNode(addItem)
+let btn = document.createElement('button');
+    btn.innerHTML = "delete";
+
+/*put value in the elements*/
+    textItem.appendChild(textSpan);
+    item.appendChild(textItem);
+    item.appendChild(btn);
+    list.appendChild(item);
+
+/* add attribute to delete button*/
+att = document.createAttribute('id');
+att.value = ('delete');
+btn.setAttributeNode(att);
+deletebtn = document.getElementById('delete');
+
+/*add attribute to li item*/
+attItem = document.createAttribute('id');
+attItem.value = ('item');
+item.setAttributeNode(attItem);
+
+/*delete item*/
+
+deletebtn.onclick = function () {
+removeItem = document.getElementById('item');
+list.removeChild(removeItem);
+}
+        
+
+    }
+
+</script>
 </html>
