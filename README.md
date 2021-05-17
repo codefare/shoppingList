@@ -1,3 +1,5 @@
+url: https://codefaresshoppinglist.netlify.app
+
 Create a simple shopping list
 
 create UI
