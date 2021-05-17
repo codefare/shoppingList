@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<style>
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        height: 100px;
+        width: 100px;
+        padding: 15px 15px 15px 15px;
+    }
+    nav {
+        margin-left: auto;
+        margin-right: 20px;;
+    }
+    ul {
+        display: flex;
+    }
+    nav li {
+        padding: 10px 15px 10px 15px;
+        list-style-type: none;
+    }
+    .hero-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .hero-image {
+        height: 500px;
+        border-radius: 30px;
+        margin-right: 40px;
+    }
+    .shop-wrapper {
+        border: 3px solid grey;
+        border-radius: 30px;
+        margin-left: 40px;
+    }
+    .input {
+        margin: 15px 15px 0px 15px;
+        padding: 15px 15px 0px 15px;
+    }
+</style>
+<body>
+    <div class="nav-wrapper">
+        <div class="logo-wrapper">
+            <img class="logo" src="./assets/images/logo.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li>Contact Us</li>
+                <li>About Us</li>
+                <li>Best Deals</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="hero-wrapper">
+        <div class="hero-container">
+            <img class="hero-image" src="./assets/images/hero.png" alt="">
+        </div>
+        <div class="shop-wrapper">
+            <div class="input">
+                <label for="">What's on Your List?</label>
+                <input type="text">
+                <button>add</button>
+            </div>
+            <div class="list">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
